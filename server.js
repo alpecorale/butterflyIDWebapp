@@ -57,6 +57,12 @@ app.post('/postButt', bodyParser.json(), async(req, res) =>{
     res.redirect('/index');
 })
 
+app.post('/filter', bodyParser.json(), async(req, res) =>{
+await ButterflyEntry.find({color: {$eq: req.body.desiredColor}})
+    .then(async result => {
+        res.render('index', {allEntries: result});
+    })
+})
 
 
 
@@ -68,7 +74,7 @@ app.get('/', (req,res) => {
 
 app.get('/index', async (req, res) => {
 
-    ButterflyEntry.find()
+    await ButterflyEntry.find()
         .then(result => {
             //console.log(result)
             res.render('index', {allEntries: result, title:"ID page"});

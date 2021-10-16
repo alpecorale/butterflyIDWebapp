@@ -7,6 +7,18 @@
 <%- include("./partials/nav.ejs") %>
 
 <div>
+    <form>
+        <label for="colorCheckOrange">Orange</label>
+        <input type="checkbox" id="colorCheckOrange" value="Orange">
+        <label for="colorCheckWhite">White</label>
+        <input type="checkbox" id="colorCheckWhite" value="White">
+        <label for="colorCheckBrown">Brown</label>
+        <input type="checkbox" id="colorCheckBrown" value="Brown">
+        <input onclick="applyFilter()" id="filterSubmit" type="submit">
+    </form>
+</div>
+
+<div>
     <table class="table" id="buttTable">
         <% if (allEntries.length > 0) { %>
             <th>Name</th>
@@ -21,7 +33,8 @@
             <% }) %>
         <% } %>
     </table>
-
+</div>
+<div>
     <form id="reviewForm">
         <input  id="name" type="text">
         <input  id="family" type="text">
