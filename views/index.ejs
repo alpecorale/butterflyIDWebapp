@@ -3,10 +3,31 @@
 <%- include("./partials/head.ejs") %>
 
 <body>
+<script src="./js/scripts.js" defer></script>
 <%- include("./partials/nav.ejs") %>
 
-<div class="not-found content">
-    OOPS, page not found :)
+<div>
+    <table class="table" id="buttTable">
+        <% if (allEntries.length > 0) { %>
+            <th>Name</th>
+            <th>Family</th>
+            <th>Color</th>
+            <% allEntries.forEach(buttEntry => { %>
+            <tr id=<%=buttEntry._id%>>
+                <td><%= buttEntry.name%></td>
+                <td><%= buttEntry.family%></td>
+                <td><%= buttEntry.color%></td>
+            </tr>
+            <% }) %>
+        <% } %>
+    </table>
+
+    <form id="reviewForm">
+        <input  id="name" type="text">
+        <input  id="family" type="text">
+        <input  id="color" type="text">
+        <input onclick="submitHandler()" id="reviewSubmit" type="submit">
+    </form>
 </div>
 
 <%- include("./partials/footer.ejs") %>

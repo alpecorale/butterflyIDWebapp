@@ -42,20 +42,40 @@ app.use((req,res,next) => {
     next();
 });
 
+app.post('/postButt', bodyParser.json(), async(req, res) =>{
+    const entry = new ButterflyEntry({
+        name: req.body.name,
+        family: req.body.family,
+        color: req.body.color
+    })
+    await entry.save()
+        .then(async result => {
+        })
+        .catch(err => {
+            console.log(err);
+        });
+    res.redirect('/index');
+})
+
+
+
+
+
 
 app.get('/', (req,res) => {
     res.redirect('/index');
 })
 
 app.get('/index', async (req, res) => {
-    /*ScoreEntry.find({rank: {$lte: 5}}).sort({rank: 0})
+
+    ButterflyEntry.find()
         .then(result => {
-            res.render('index', {leaderboards: result, title: "Game"});
+            //console.log(result)
+            res.render('index', {allEntries: result, title:"ID page"});
         })
-        .catch(err => {
+        .catch(err =>{
             console.log(err);
-        });*/
-    res.render('index', {title:"ID page"});
+        })
 });
 
 // 404 page

@@ -16,5 +16,5 @@ const butterflyEntrySchema = new Schema({
     }
 });
 
-const ButterflyEntry = mongoose.model('Butterfly Entry', butterflyEntrySchema);
+const ButterflyEntry = mongoose.model('butterflyID', butterflyEntrySchema);
 module.exports = ButterflyEntry;
