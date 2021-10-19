@@ -4,15 +4,19 @@ const Schema = mongoose.Schema;
 const butterflyEntrySchema = new Schema({
     name: {
         type: String,
-        required: true,
+        required: true
     },
     family: {
         type: String,
-        required: true,
+        required: true
     },
     color: {
-        type: String,
-        required: true,
+        type: Array,
+        required: true
+    },
+    imageUrl:{
+      type: String,
+      required: false
     }
 });
 

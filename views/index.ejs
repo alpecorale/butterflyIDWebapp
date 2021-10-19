@@ -7,41 +7,83 @@
 <%- include("./partials/nav.ejs") %>
 
 <div>
-    <form>
+    <div id="familySelectors">
+        <label for="familySelect">Family</label>
+        <!--<input type="checkbox" id="familySkippers">-->
+        <select id="familySelect">
+            <option value = "none">None</option>
+            <option value="Skipper">Skipper</option>
+        </select>
+    </div>
+    <div id="primaryColorSelectors">
         <label for="colorCheckOrange">Orange</label>
-        <input type="checkbox" id="colorCheckOrange" value="Orange">
+        <input type="checkbox" id="colorCheckOrange">
         <label for="colorCheckWhite">White</label>
-        <input type="checkbox" id="colorCheckWhite" value="White">
+        <input type="checkbox" id="colorCheckWhite">
         <label for="colorCheckBrown">Brown</label>
-        <input type="checkbox" id="colorCheckBrown" value="Brown">
-        <input onclick="applyFilter()" id="filterSubmit" type="submit">
-    </form>
+        <input type="checkbox" id="colorCheckBrown">
+        <label for="colorCheckBlack">Black</label>
+        <input type="checkbox" id="colorCheckBlack">
+        <label for="colorCheckBlue">Blue</label>
+        <input type="checkbox" id="colorCheckBlue">
+        <label for="colorCheckGrey">Grey</label>
+        <input type="checkbox" id="colorCheckGrey">
+        <label for="colorCheckGreen">Green</label>
+        <input type="checkbox" id="colorCheckGreen">
+        <label for="colorCheckPurple">Purple</label>
+        <input type="checkbox" id="colorCheckPurple">
+        <label for="colorCheckRed">Red</label>
+        <input type="checkbox" id="colorCheckRed">
+        <label for="colorCheckCopper">Copper</label>
+        <input type="checkbox" id="colorCheckCopper">
+    </div>
+    <button onclick="applyFilter()" id="filterSubmit">Apply Filter</button>
+    <button onclick="refreshFilter()" id="filterRefresh">Clear All Filters</button>
 </div>
 
 <div>
     <table class="table" id="buttTable">
         <% if (allEntries.length > 0) { %>
-            <th>Name</th>
-            <th>Family</th>
-            <th>Color</th>
+            <tr class="Skipper Orange White Brown">
+                <th>Name</th>
+                <th>Family</th>
+                <th>Color</th>
+                <th>Image</th>
+            </tr>
             <% allEntries.forEach(buttEntry => { %>
-            <tr id=<%=buttEntry._id%>>
+                <%let colors = ''%>
+                <%let colors2 = ''%>
+                <%for(let i = 0; i < buttEntry.color.length; i++){%>
+                <%if (colors != ''){%>
+                <%colors = colors + ", " + buttEntry.color[i]%>
+                <%colors2 = colors2 + " " + buttEntry.color[i]%>
+                <%} else {%>
+                <%colors = buttEntry.color[i]%>
+                <%colors2 = buttEntry.color[i]%>
+                <%}%>
+                <%}%>
+            <tr id="<%=buttEntry._id%>" class="butterfly <%=colors2%> <%=buttEntry.family%>">
                 <td><%= buttEntry.name%></td>
                 <td><%= buttEntry.family%></td>
-                <td><%= buttEntry.color%></td>
+                <td>
+                    <%=colors%>
+                </td>
+                <td>
+                    <img src="butterflyImg/monarch.jpg" width="240" height="130">
+                </td>
             </tr>
             <% }) %>
         <% } %>
     </table>
 </div>
-<div>
+<!--<div>
     <form id="reviewForm">
         <input  id="name" type="text">
         <input  id="family" type="text">
         <input  id="color" type="text">
         <input onclick="submitHandler()" id="reviewSubmit" type="submit">
     </form>
-</div>
+</div>-->
 
 <%- include("./partials/footer.ejs") %>
 </body>

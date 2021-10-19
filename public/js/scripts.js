@@ -1,33 +1,56 @@
 const nameVal = document.getElementById("name");
 const famVal = document.getElementById("family");
 const colorVal = document.getElementById("color");
-const orangeCheck = document.getElementById("colorCheckOrange");
-const whiteCheck = document.getElementById("colorCheckWhite");
-const brownCheck = document.getElementById("colorCheckBrown");
+const orangeCheck = document.getElementById("colorCheckOrange"),
+    whiteCheck = document.getElementById("colorCheckWhite"),
+    blackCheck = document.getElementById("colorCheckBlack"),
+    greyCheck = document.getElementById("colorCheckGrey"),
+    greenCheck = document.getElementById("colorCheckGreen"),
+    blueCheck = document.getElementById("colorCheckBlue"),
+    purpleCheck = document.getElementById("colorCheckPurple"),
+    copperCheck = document.getElementById("colorCheckCopper"),
+    redCheck = document.getElementById("colorCheckRed"),
+    brownCheck = document.getElementById("colorCheckBrown");
+const familyChoice = document.getElementById('familySelect');
 
-async function applyFilter() {
-    const colorArray = ''
-    if(orangeCheck.checked){colorArray.push(orangeCheck.value)}
-    if(whiteCheck.checked){colorArray.push(whiteCheck.value)}
-    if(brownCheck.checked){colorArray.push(brownCheck.value)}
+function refreshFilter(){
+    window.location.reload();
+}
 
-    const json = {desiredColor: colorArray};
-    const body = JSON.stringify(json);
-
-    await fetch('/filter', {
-        method: 'POST',
-        body,
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-        .then(response => {
-            return response.json();
-        })
-        .then(json => {
-            //window.location.reload();
-        })
-    //window.location.reload();
+function applyFilter() {
+    if(familyChoice.value == "Skipper"){
+        document.querySelectorAll("tr:not(.Skipper)" ).forEach(a=>a.style.display = "none");
+    }
+    if(orangeCheck.checked){
+        document.querySelectorAll("tr:not(.Orange)" ).forEach(a=>a.style.display = "none");
+    }
+    if(whiteCheck.checked){
+        document.querySelectorAll("tr:not(.White)" ).forEach(a=>a.style.display = "none");
+    }
+    if(brownCheck.checked){
+        document.querySelectorAll("tr:not(.Brown)" ).forEach(a=>a.style.display = "none");
+    }
+    if(blackCheck.checked){
+        document.querySelectorAll("tr:not(.Black)" ).forEach(a=>a.style.display = "none");
+    }
+    if(greyCheck.checked){
+        document.querySelectorAll("tr:not(.Grey)" ).forEach(a=>a.style.display = "none");
+    }
+    if(blueCheck.checked){
+        document.querySelectorAll("tr:not(.Blue)" ).forEach(a=>a.style.display = "none");
+    }
+    if(greenCheck.checked){
+        document.querySelectorAll("tr:not(.Green)" ).forEach(a=>a.style.display = "none");
+    }
+    if(purpleCheck.checked){
+        document.querySelectorAll("tr:not(.Purple)" ).forEach(a=>a.style.display = "none");
+    }
+    if(redCheck.checked){
+        document.querySelectorAll("tr:not(.Red)" ).forEach(a=>a.style.display = "none");
+    }
+    if(copperCheck.checked){
+        document.querySelectorAll("tr:not(.Copper)" ).forEach(a=>a.style.display = "none");
+    }
 }
 
 
