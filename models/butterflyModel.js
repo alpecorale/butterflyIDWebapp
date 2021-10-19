@@ -14,9 +14,29 @@ const butterflyEntrySchema = new Schema({
         type: Array,
         required: true
     },
-    imageUrl:{
-      type: String,
-      required: false
+    hwColor:{
+        type: Array,
+        required: true
+    },
+    pattern:{
+        type: String,
+        required: true
+    },
+    size:{
+        type: String,
+        required: true
+    },
+    hooked:{
+        type: String,
+        required: true
+    },
+    shape:{
+        type: String,
+        required: true
+    },
+    tails:{
+        type: String,
+        required: true
     }
 });
 
