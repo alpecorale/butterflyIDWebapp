@@ -19,7 +19,7 @@ const butterflyEntrySchema = new Schema({
         required: true
     },
     pattern:{
-        type: String,
+        type: Array,
         required: true
     },
     size:{
@@ -35,6 +35,10 @@ const butterflyEntrySchema = new Schema({
         required: true
     },
     tails:{
+        type: String,
+        required: true
+    },
+    imgLoc:{
         type: String,
         required: true
     }

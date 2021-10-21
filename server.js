@@ -46,7 +46,14 @@ app.post('/postButt', bodyParser.json(), async(req, res) =>{
     const entry = new ButterflyEntry({
         name: req.body.name,
         family: req.body.family,
-        color: req.body.color
+        color: req.body.color,
+        hwColor: req.body.hwColor,
+        size: req.body.size,
+        pattern: req.body.pattern,
+        shape: req.body.shape,
+        hooked: req.body.hooked,
+        tails: req.body.tails,
+        imgLoc: "greyedOut.png"
     })
     await entry.save()
         .then(async result => {

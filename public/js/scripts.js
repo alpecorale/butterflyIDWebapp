@@ -1,6 +1,12 @@
-const nameVal = document.getElementById("name");
-const famVal = document.getElementById("family");
-const colorVal = document.getElementById("color");
+const nameVal = document.getElementById("name"),
+    famVal = document.getElementById("family"),
+    colorVal = document.getElementById("color"),
+    hwColorVal = document.getElementById("hwcolor"),
+    patternVal = document.getElementById("pattern"),
+    sizeVal = document.getElementById("size"),
+    shapeVal = document.getElementById("shape"),
+    tailsVal = document.getElementById("tails"),
+    hookedVal = document.getElementById("hooked");
 const orangeCheck = document.getElementById("colorCheckOrange"),
     whiteCheck = document.getElementById("colorCheckWhite"),
     blackCheck = document.getElementById("colorCheckBlack"),
@@ -151,9 +157,22 @@ function applyFilter() {
 
 
 async function submitHandler() {
+    let colorList = colorVal.value.split(", ");
+    let hwColorList = hwColorVal.value.split(", ") + "-h";
+    let patternList = patternVal.value.split(", ");
+
+
+
     const json = {name: nameVal.value,
             family: famVal.value,
-            color: colorVal.value},
+            color: colorList,
+            hwColor: hwColorList,
+            size: sizeVal.value,
+            pattern: patternList,
+            hooked: hookedVal.value,
+            tails: tailsVal.value,
+            shape: shapeVal.value
+        },
         body = JSON.stringify(json);
 
         // submit new value

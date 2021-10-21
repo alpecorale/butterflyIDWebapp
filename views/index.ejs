@@ -5,177 +5,198 @@
 <body>
 <script src="./js/scripts.js" defer></script>
 <%- include("./partials/nav.ejs") %>
+<div class="container-fluid">
+    <br>
+    <div class="row">
+        <h2>Butterfly Attributes:</h2>
+        <div class="col-9">
+            <div id="familySelectors">
+                <label for="familySelect"><b>Family:</b></label>
+                <!--<input type="checkbox" id="familySkippers">-->
+                <select id="familySelect" class="form-select">
+                    <option value="none">Unknown</option>
+                    <option value="Hesperiidae">Hesperiidae(Skipper)</option>
+                    <option value="Nymphalidae">Nymphalidae</option>
+                    <option value="Pieridae">Pieridae</option>
+                    <option value="Papilionidae">Papilionidae(Swallowtail)</option>
+                    <option value="Lycaenidae">Lycaenidae</option>
+                </select>
+                <br>
+            </div>
+            <div id="primaryColorSelectors">
+                <b>Forewing Color:</b>
+                <label for="colorCheckOrange">Orange</label>
+                <input type="checkbox" id="colorCheckOrange">
+                <label for="colorCheckWhite">White</label>
+                <input type="checkbox" id="colorCheckWhite">
+                <label for="colorCheckBrown">Brown</label>
+                <input type="checkbox" id="colorCheckBrown">
+                <label for="colorCheckBlack">Black</label>
+                <input type="checkbox" id="colorCheckBlack">
+                <label for="colorCheckBlue">Blue</label>
+                <input type="checkbox" id="colorCheckBlue">
+                <label for="colorCheckGrey">Grey</label>
+                <input type="checkbox" id="colorCheckGrey">
+                <label for="colorCheckGreen">Green</label>
+                <input type="checkbox" id="colorCheckGreen">
+                <label for="colorCheckPurple">Purple</label>
+                <input type="checkbox" id="colorCheckPurple">
+                <label for="colorCheckRed">Red</label>
+                <input type="checkbox" id="colorCheckRed">
+                <label for="colorCheckCopper">Copper</label>
+                <input type="checkbox" id="colorCheckCopper">
+            </div>
+            <div>
+                <b>Hindwing Color:</b>
+                <label for="colorCheckOrangehw">Orange</label>
+                <input type="checkbox" id="colorCheckOrangehw">
+                <label for="colorCheckWhitehw">White</label>
+                <input type="checkbox" id="colorCheckWhitehw">
+                <label for="colorCheckBrownhw">Brown</label>
+                <input type="checkbox" id="colorCheckBrownhw">
+                <label for="colorCheckBlackhw">Black</label>
+                <input type="checkbox" id="colorCheckBlackhw">
+                <label for="colorCheckBluehw">Blue</label>
+                <input type="checkbox" id="colorCheckBluehw">
+                <label for="colorCheckGreyhw">Grey</label>
+                <input type="checkbox" id="colorCheckGreyhw">
+                <label for="colorCheckGreenhw">Green</label>
+                <input type="checkbox" id="colorCheckGreenhw">
+                <label for="colorCheckPurplehw">Purple</label>
+                <input type="checkbox" id="colorCheckPurplehw">
+                <label for="colorCheckRedhw">Red</label>
+                <input type="checkbox" id="colorCheckRedhw">
+                <label for="colorCheckCopperhw">Copper</label>
+                <input type="checkbox" id="colorCheckCopperhw">
+            </div>
+            <div>
+                <b>Tails:</b>
+                <select id="tailSelect">
+                    <option>Unknown</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div>
+                <b>Hooked:</b>
+                <select id="hookSelect">
+                    <option>Unknown</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div>
+                <b>Shape:</b>
+                <select id="shapeSelect">
+                    <option>Unknown</option>
+                    <option value="Common">Common</option>
+                    <option value="Unique">Unique</option>
+                    <option value="Hairstreak">Hairstreak</option>
+                    <option value="Skipper">Skipper</option>
+                    <option value="Longtail">Longtail</option>
+                </select>
+            </div>
+            <div>
+                <b>Size:</b>
+                <select id="sizeSelect">
+                    <option>Unknown</option>
+                    <option value="Small">Less than 2.5"</option>
+                    <option value="Large">Greater than 2.5"</option>
+                </select>
+            </div>
+            <div>
+                <b>PatternL</b>
+                <label for="patternCheckVeins">Veins</label>
+                <input type="checkbox" id="patternCheckVeins">
+                <label for="patternCheckEyes">Eyes</label>
+                <input type="checkbox" id="patternCheckEyes">
+                <label for="patternCheckSpots">Spots</label>
+                <input type="checkbox" id="patternCheckSpots">
+                <label for="patternCheckEtc">Etc</label>
+                <input type="checkbox" id="patternCheckEtc">
+            </div>
+            <div>
+                <button class="btn-primary" onclick="applyFilter()" id="filterSubmit">Apply Filter</button>
+                <button class="btn-warning" onclick="refreshFilter()" id="filterRefresh">Clear All Filters</button>
+            </div>
+        </div>
+    </div>
 
-<div>
-    <div id="familySelectors">
-        <label for="familySelect"><b>Family:</b></label>
-        <!--<input type="checkbox" id="familySkippers">-->
-        <select id="familySelect">
-            <option value="none">Unknown</option>
-            <option value="Hesperiidae">Hesperiidae(Skipper)</option>
-            <option value="Nymphalidae">Nymphalidae</option>
-            <option value="Pieridae">Pieridae</option>
-            <option value="Papilionidae">Papilionidae(Swallowtail)</option>
-            <option value="Lycaenidae">Lycaenidae</option>
-        </select>
-        <br>
-    </div>
-    <div id="primaryColorSelectors">
-        <b>Forewing Color:</b>
-        <label for="colorCheckOrange">Orange</label>
-        <input type="checkbox" id="colorCheckOrange">
-        <label for="colorCheckWhite">White</label>
-        <input type="checkbox" id="colorCheckWhite">
-        <label for="colorCheckBrown">Brown</label>
-        <input type="checkbox" id="colorCheckBrown">
-        <label for="colorCheckBlack">Black</label>
-        <input type="checkbox" id="colorCheckBlack">
-        <label for="colorCheckBlue">Blue</label>
-        <input type="checkbox" id="colorCheckBlue">
-        <br>
-        <label for="colorCheckGrey">Grey</label>
-        <input type="checkbox" id="colorCheckGrey">
-        <label for="colorCheckGreen">Green</label>
-        <input type="checkbox" id="colorCheckGreen">
-        <label for="colorCheckPurple">Purple</label>
-        <input type="checkbox" id="colorCheckPurple">
-        <label for="colorCheckRed">Red</label>
-        <input type="checkbox" id="colorCheckRed">
-        <label for="colorCheckCopper">Copper</label>
-        <input type="checkbox" id="colorCheckCopper">
-    </div>
-    <div>
-        <b>Hindwing Color:</b>
-        <label for="colorCheckOrangehw">Orange</label>
-        <input type="checkbox" id="colorCheckOrangehw">
-        <label for="colorCheckWhitehw">White</label>
-        <input type="checkbox" id="colorCheckWhitehw">
-        <label for="colorCheckBrownhw">Brown</label>
-        <input type="checkbox" id="colorCheckBrownhw">
-        <label for="colorCheckBlackhw">Black</label>
-        <input type="checkbox" id="colorCheckBlackhw">
-        <label for="colorCheckBluehw">Blue</label>
-        <input type="checkbox" id="colorCheckBluehw">
-        <br>
-        <label for="colorCheckGreyhw">Grey</label>
-        <input type="checkbox" id="colorCheckGreyhw">
-        <label for="colorCheckGreenhw">Green</label>
-        <input type="checkbox" id="colorCheckGreenhw">
-        <label for="colorCheckPurplehw">Purple</label>
-        <input type="checkbox" id="colorCheckPurplehw">
-        <label for="colorCheckRedhw">Red</label>
-        <input type="checkbox" id="colorCheckRedhw">
-        <label for="colorCheckCopperhw">Copper</label>
-        <input type="checkbox" id="colorCheckCopperhw">
+    <div class="row">
+        <div class="col">
+            <table class="table" id="buttTable">
+                <% if (allEntries.length > 0) { %>
+                    <tr class="Common Hairstreak Longtail Skipper Unique Small Large Yes-h No-h Yes-t No-t Hesperiidae Papilionidae Nymphalidae Pieridae Lycaenidae Orange White Brown Purple Blue Green Copper Grey Black Red Orange-h White-h Brown-h Purple-h Blue-h Green-h Copper-h Grey-h Black-h Red-h">
+                        <th>Name</th>
+                        <th>Family</th>
+                        <th>Forewing Color</th>
+                        <th>Hindwing Color</th>
+                        <th>Pattern</th>
+                        <th>Tails</th>
+                        <th>Size</th>
+                        <th>Shape</th>
+                        <th>Hooked Antennae</th>
+                        <th>Image</th>
+                    </tr>
+                    <% allEntries.forEach(buttEntry => { %>
+                        <%let colors = ''%>
+                        <%let colors2 = ''%>
+                        <%for(let i = 0; i < buttEntry.color.length; i++){%>
+                        <%if (colors != ''){%>
+                        <%colors = colors + ", " + buttEntry.color[i]%>
+                        <%colors2 = colors2 + " " + buttEntry.color[i]%>
+                        <%} else {%>
+                        <%colors = buttEntry.color[i]%>
+                        <%colors2 = buttEntry.color[i]%>
+                        <%}%>
+                        <%}%>
+                        <%let hwcolors = ''%>
+                        <%let hwcolors2 = ''%>
+                        <%for(let i = 0; i < buttEntry.hwColor.length; i++){%>
+                        <%if (hwcolors != ''){%>
+                        <%hwcolors = hwcolors + ", " + buttEntry.hwColor[i]%>
+                        <%hwcolors = hwcolors.slice(0, -2)%>
+                        <%hwcolors2 = hwcolors2 + " " + buttEntry.hwColor[i]%>
+                        <%} else {%>
+                        <%hwcolors = buttEntry.hwColor[i]%>
+                        <%hwcolors = hwcolors.slice(0, -2)%>
+                        <%hwcolors2 = buttEntry.hwColor[i]%>
+                        <%}%>
+                        <%}%>
+                        <tr id="<%=buttEntry._id%>" class="butterfly <%=buttEntry.shape%> <%=buttEntry.size%> <%=colors2%> <%=hwcolors2%> <%=buttEntry.hooked%>-h <%=buttEntry.tails%>-t <%=buttEntry.family%>">
+                            <td><%= buttEntry.name%></td>
+                            <td><%= buttEntry.family%></td>
+                            <td><%= colors%></td>
+                            <td><%= hwcolors%></td>
+                            <td><%= buttEntry.pattern%></td>
+                            <td><%= buttEntry.tails%></td>
+                            <td><%= buttEntry.size%></td>
+                            <td><%= buttEntry.shape%></td>
+                            <td><%= buttEntry.hooked%></td>
+                            <td>
+                                <img src="butterflyImg/<%=buttEntry.imgLoc%>" width="240" height="130">
+                            </td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </table>
+        </div>
     </div>
     <div>
-        <b>Tails:</b>
-        <select id="tailSelect">
-            <option></option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
-    </div>
-    <div>
-        <b>Hooked:</b>
-        <select id="hookSelect">
-            <option></option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
-    </div>
-    <div>
-        <b>Shape:</b>
-        <select id="shapeSelect">
-            <option></option>
-            <option value="Common">Common</option>
-            <option value="Unique">Unique</option>
-            <option value="Hairstreak">Hairstreak</option>
-            <option value="Skipper">Skipper</option>
-            <option value="Longtail">Longtail</option>
-        </select>
-    </div>
-    <div>
-        <b>Size:</b>
-        <select id="sizeSelect">
-            <option></option>
-            <option value="Small">Less than 2.5"</option>
-            <option value="Large">Greater than 2.5"</option>
-        </select>
-    </div>
-    <div>
-    <button onclick="applyFilter()" id="filterSubmit">Apply Filter</button>
-    <button onclick="refreshFilter()" id="filterRefresh">Clear All Filters</button>
+        <form id="reviewForm">
+            <input  id="name" type="text" placeholder="Name">
+            <input  id="family" type="text" placeholder="Family">
+            <input  id="color" type="text" placeholder="FW colors">
+            <input  id="hwcolor" type="text" placeholder="HW colors">
+            <input  id="pattern" type="text" placeholder="Patterns">
+            <input  id="size" type="text" placeholder="Size">
+            <input  id="hooked" type="text" placeholder="Hooked">
+            <input  id="shape" type="text" placeholder="Shape">
+            <input  id="tails" type="text" placeholder="Tails">
+            <input onclick="submitHandler()" id="reviewSubmit" type="submit">
+        </form>
     </div>
 </div>
-
-<div>
-    <table class="table" id="buttTable">
-        <% if (allEntries.length > 0) { %>
-            <tr class="Common Hairstreak Longtail Skipper Unique Small Large Yes-h No-h Yes-t No-t Hesperiidae Papilionidae Nymphalidae Pieridae Lycaenidae Orange White Brown Purple Blue Green Copper Grey Black Red Orange-h White-h Brown-h Purple-h Blue-h Green-h Copper-h Grey-h Black-h Red-h">
-                <th>Name</th>
-                <th>Family</th>
-                <th>Forewing Color</th>
-                <th>Hindwing Color</th>
-                <th>Pattern</th>
-                <th>Tails</th>
-                <th>Size</th>
-                <th>Shape</th>
-                <th>Hooked Antennae</th>
-                <th>Image</th>
-            </tr>
-            <% allEntries.forEach(buttEntry => { %>
-                <%let colors = ''%>
-                <%let colors2 = ''%>
-                <%for(let i = 0; i < buttEntry.color.length; i++){%>
-                <%if (colors != ''){%>
-                <%colors = colors + ", " + buttEntry.color[i]%>
-                <%colors2 = colors2 + " " + buttEntry.color[i]%>
-                <%} else {%>
-                <%colors = buttEntry.color[i]%>
-                <%colors2 = buttEntry.color[i]%>
-                <%}%>
-                <%}%>
-                <%let hwcolors = ''%>
-                <%let hwcolors2 = ''%>
-                <%for(let i = 0; i < buttEntry.hwColor.length; i++){%>
-                <%if (hwcolors != ''){%>
-                <%hwcolors = hwcolors + ", " + buttEntry.hwColor[i]%>
-                <%hwcolors = hwcolors.slice(0, -2)%>
-                <%hwcolors2 = hwcolors2 + " " + buttEntry.hwColor[i]%>
-                <%} else {%>
-                <%hwcolors = buttEntry.hwColor[i]%>
-                <%hwcolors = hwcolors.slice(0, -2)%>
-                <%hwcolors2 = buttEntry.hwColor[i]%>
-                <%}%>
-                <%}%>
-            <tr id="<%=buttEntry._id%>" class="butterfly <%=buttEntry.shape%> <%=buttEntry.size%> <%=colors2%> <%=hwcolors2%> <%=buttEntry.hooked%>-h <%=buttEntry.tails%>-t <%=buttEntry.family%>">
-                <td><%= buttEntry.name%></td>
-                <td><%= buttEntry.family%></td>
-                <td><%= colors%></td>
-                <td><%= hwcolors%></td>
-                <td><%= buttEntry.pattern%></td>
-                <td><%= buttEntry.tails%></td>
-                <td><%= buttEntry.size%></td>
-                <td><%= buttEntry.shape%></td>
-                <td><%= buttEntry.hooked%></td>
-                <td>
-                    <img src="butterflyImg/<%=buttEntry.name%>.jpg" width="240" height="130">
-                </td>
-            </tr>
-            <% }) %>
-        <% } %>
-    </table>
-</div>
-<!--<div>
-    <form id="reviewForm">
-        <input  id="name" type="text">
-        <input  id="family" type="text">
-        <input  id="color" type="text">
-        <input onclick="submitHandler()" id="reviewSubmit" type="submit">
-    </form>
-</div>-->
-
 <%- include("./partials/footer.ejs") %>
 </body>
 </html>
