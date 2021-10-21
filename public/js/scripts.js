@@ -133,6 +133,9 @@ function applyFilter() {
     if(sizeChoice.value === "Small"){
         document.querySelectorAll("tr:not(.Small)" ).forEach(a=>a.style.display = "none");
     }
+    if(sizeChoice.value === "Medium"){
+        document.querySelectorAll("tr:not(.Medium)" ).forEach(a=>a.style.display = "none");
+    }
     if(sizeChoice.value === "Large"){
         document.querySelectorAll("tr:not(.Large)" ).forEach(a=>a.style.display = "none");
     }
