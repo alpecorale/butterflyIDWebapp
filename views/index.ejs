@@ -161,12 +161,12 @@
                         <%for(let i = 0; i < hwColorsArray.length; i++){%>
                         <%if (hwcolors != ''){%>
                         <%hwcolors = hwcolors + ", " + hwColorsArray[i]%>
-                        <%hwcolors = hwcolors.slice(0, -2)%>
                         <%hwcolors2 = hwcolors2 + " " + hwColorsArray[i]%>
+                        <%hwcolors2 += '-h'%>
                         <%} else {%>
                         <%hwcolors = hwColorsArray[i]%>
-                        <%hwcolors = hwcolors.slice(0, -2)%>
                         <%hwcolors2 = hwColorsArray[i]%>
+                        <%hwcolors2 += '-h'%>
                         <%}%>
                         <%}%>
                         <tr id="<%=buttEntry._id%>" class="butterfly <%=buttEntry.shape%> <%=buttEntry.size%> <%=colors2%> <%=hwcolors2%> <%=buttEntry.hooked%>-h <%=buttEntry.tails%>-t <%=buttEntry.family%>">
