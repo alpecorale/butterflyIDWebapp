@@ -161,17 +161,26 @@ function applyFilter() {
 
 async function submitHandler() {
     let colorList = colorVal.value.split(", ");
-    let hwColorList = hwColorVal.value.split(", ") + "-h";
     let patternList = patternVal.value.split(", ");
-
+    let hwColorList = hwColorVal.value.split(", ") + "-h";
+    let newHWColorString = '';
+    for (let i = 0; i < hwColorList.length; i++){
+        newHWColorString += hwColorList[i]
+        let j = i + 1
+        if (j >= hwColorList.length){
+            newHWColorString += '-h';
+        } else {
+            newHWColorString += '-h, '
+        }
+    }
 
 
     const json = {name: nameVal.value,
             family: famVal.value,
-            color: colorList,
-            hwColor: hwColorList,
+            color: colorVal.value,
+            hwColor: newHWColorString,
             size: sizeVal.value,
-            pattern: patternList,
+            pattern: patternVal.value,
             hooked: hookedVal.value,
             tails: tailsVal.value,
             shape: shapeVal.value

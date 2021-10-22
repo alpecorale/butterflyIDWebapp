@@ -15,10 +15,10 @@
                 <!--<input type="checkbox" id="familySkippers">-->
                 <select id="familySelect" class="form-select">
                     <option value="none">Unknown</option>
-                    <option value="Hesperiidae">Hesperiidae(Skipper)</option>
+                    <option value="Hesperiidae">Hesperiidae (Skipper)</option>
                     <option value="Nymphalidae">Nymphalidae</option>
                     <option value="Pieridae">Pieridae</option>
-                    <option value="Papilionidae">Papilionidae(Swallowtail)</option>
+                    <option value="Papilionidae">Papilionidae (Swallowtail)</option>
                     <option value="Lycaenidae">Lycaenidae</option>
                 </select>
                 <br>
@@ -143,28 +143,30 @@
                         <th>Image</th>
                     </tr>
                     <% allEntries.forEach(buttEntry => { %>
+                        <%let colorsArray = buttEntry.color.split(", ")%>
                         <%let colors = ''%>
                         <%let colors2 = ''%>
-                        <%for(let i = 0; i < buttEntry.color.length; i++){%>
+                        <%for(let i = 0; i < colorsArray.length; i++){%>
                         <%if (colors != ''){%>
-                        <%colors = colors + ", " + buttEntry.color[i]%>
-                        <%colors2 = colors2 + " " + buttEntry.color[i]%>
+                        <%colors = colors + ", " + colorsArray[i]%>
+                        <%colors2 = colors2 + " " + colorsArray[i]%>
                         <%} else {%>
-                        <%colors = buttEntry.color[i]%>
-                        <%colors2 = buttEntry.color[i]%>
+                        <%colors = colorsArray[i]%>
+                        <%colors2 = colorsArray[i]%>
                         <%}%>
                         <%}%>
+                        <%let hwColorsArray = buttEntry.hwColor.split(", ")%>
                         <%let hwcolors = ''%>
                         <%let hwcolors2 = ''%>
-                        <%for(let i = 0; i < buttEntry.hwColor.length; i++){%>
+                        <%for(let i = 0; i < hwColorsArray.length; i++){%>
                         <%if (hwcolors != ''){%>
-                        <%hwcolors = hwcolors + ", " + buttEntry.hwColor[i]%>
+                        <%hwcolors = hwcolors + ", " + hwColorsArray[i]%>
                         <%hwcolors = hwcolors.slice(0, -2)%>
-                        <%hwcolors2 = hwcolors2 + " " + buttEntry.hwColor[i]%>
+                        <%hwcolors2 = hwcolors2 + " " + hwColorsArray[i]%>
                         <%} else {%>
-                        <%hwcolors = buttEntry.hwColor[i]%>
+                        <%hwcolors = hwColorsArray[i]%>
                         <%hwcolors = hwcolors.slice(0, -2)%>
-                        <%hwcolors2 = buttEntry.hwColor[i]%>
+                        <%hwcolors2 = hwColorsArray[i]%>
                         <%}%>
                         <%}%>
                         <tr id="<%=buttEntry._id%>" class="butterfly <%=buttEntry.shape%> <%=buttEntry.size%> <%=colors2%> <%=hwcolors2%> <%=buttEntry.hooked%>-h <%=buttEntry.tails%>-t <%=buttEntry.family%>">

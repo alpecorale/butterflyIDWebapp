@@ -11,15 +11,15 @@ const butterflyEntrySchema = new Schema({
         required: true
     },
     color: {
-        type: Array,
+        type: String,
         required: true
     },
     hwColor:{
-        type: Array,
+        type: String,
         required: true
     },
     pattern:{
-        type: Array,
+        type: String,
         required: true
     },
     size:{
