@@ -1,0 +1,74 @@
+<table class="table" id="buttTable">
+                <% if (allEntries.length > 0) { %>
+                    <tr class="Common Hairstreak Longtail Skipper Unique Small Medium Large Yes-h No-h Yes-t No-t Hesperiidae Papilionidae Nymphalidae Pieridae Lycaenidae Orange White Brown Purple Blue Green Copper Grey Black Red Orange-h White-h Brown-h Purple-h Blue-h Green-h Copper-h Grey-h Black-h Red-h">
+                        <th>Name</th>
+                        <th>Family</th>
+                        <th>Forewing Color</th>
+                        <th>Hindwing Color</th>
+                        <th>Pattern</th>
+                        <th>Tails</th>
+                        <th>Size</th>
+                        <th>Shape</th>
+                        <th>Hooked Antennae</th>
+                        <th>Image</th>
+                    </tr>
+                    <% allEntries.forEach(buttEntry => { %>
+                        <%let colorsArray = buttEntry.color.split(", ")%>
+                        <%let colors = ''%>
+                        <%let colors2 = ''%>
+                        <%for(let i = 0; i < colorsArray.length; i++){%>
+                        <%if (colors != ''){%>
+                        <%colors = colors + ", " + colorsArray[i]%>
+                        <%colors2 = colors2 + " " + colorsArray[i]%>
+                        <%} else {%>
+                        <%colors = colorsArray[i]%>
+                        <%colors2 = colorsArray[i]%>
+                        <%}%>
+                        <%}%>
+                        <%let hwColorsArray = buttEntry.hwColor.split(", ")%>
+                        <%let hwcolors = ''%>
+                        <%let hwcolors2 = ''%>
+                        <%for(let i = 0; i < hwColorsArray.length; i++){%>
+                        <%if (hwcolors != ''){%>
+                        <%hwcolors = hwcolors + ", " + hwColorsArray[i]%>
+                        <%hwcolors2 = hwcolors2 + " " + hwColorsArray[i]%>
+                        <%hwcolors2 += '-h'%>
+                        <%} else {%>
+                        <%hwcolors = hwColorsArray[i]%>
+                        <%hwcolors2 = hwColorsArray[i]%>
+                        <%hwcolors2 += '-h'%>
+                        <%}%>
+                        <%}%>
+                        <tr id="<%=buttEntry._id%>" class="butterfly <%=buttEntry.shape%> <%=buttEntry.size%> <%=colors2%> <%=hwcolors2%> <%=buttEntry.hooked%>-h <%=buttEntry.tails%>-t <%=buttEntry.family%>">
+                            <td><%= buttEntry.name%></td>
+                            <td><%= buttEntry.family%></td>
+                            <td><%= colors%></td>
+                            <td><%= hwcolors%></td>
+                            <td><%= buttEntry.pattern%></td>
+                            <td><%= buttEntry.tails%></td>
+                            <td><%= buttEntry.size%></td>
+                            <td><%= buttEntry.shape%></td>
+                            <td><%= buttEntry.hooked%></td>
+                            <td>
+                                <img src="butterflyImg/<%=buttEntry.imgLoc%>" width="240" height="130">
+                            </td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </table>
+
+
+<!--<div>
+        <form id="reviewForm">
+            <input  id="name" type="text" placeholder="Name">
+            <input  id="family" type="text" placeholder="Family">
+            <input  id="color" type="text" placeholder="FW colors">
+            <input  id="hwcolor" type="text" placeholder="HW colors">
+            <input  id="pattern" type="text" placeholder="Patterns">
+            <input  id="size" type="text" placeholder="Size">
+            <input  id="hooked" type="text" placeholder="Hooked">
+            <input  id="shape" type="text" placeholder="Shape">
+            <input  id="tails" type="text" placeholder="Tails">
+            <input onclick="submitHandler()" id="reviewSubmit" type="submit">
+        </form>
+    </div>-->

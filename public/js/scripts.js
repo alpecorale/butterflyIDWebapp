@@ -42,120 +42,120 @@ function applyFilter() {
     document.querySelectorAll(".butterfly").forEach(a=>a.style.display = "block");
 
     if(familyChoice.value === "Hesperiidae"){
-        document.querySelectorAll("tr:not(.Hesperiidae)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Hesperiidae)" ).forEach(a=>a.style.display = "none");
     }
     if(familyChoice.value === "Papilionidae"){
-        document.querySelectorAll("tr:not(.Swallowtailr)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Papilionidae)" ).forEach(a=>a.style.display = "none");
     }
     if(familyChoice.value === "Pieridae"){
-        document.querySelectorAll("tr:not(.Pieridae)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Pieridae)" ).forEach(a=>a.style.display = "none");
     }
     if(familyChoice.value === "Lycaenidae"){
-        document.querySelectorAll("tr:not(.Lycaenidae)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Lycaenidae)" ).forEach(a=>a.style.display = "none");
     }
     if(familyChoice.value === "Nymphalidae"){
-        document.querySelectorAll("tr:not(.Nymphalidae)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Nymphalidae)" ).forEach(a=>a.style.display = "none");
     }
 
     if(orangeCheck.checked){
-        document.querySelectorAll("tr:not(.Orange)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Orange)" ).forEach(a=>a.style.display = "none");
     }
     if(whiteCheck.checked){
-        document.querySelectorAll("tr:not(.White)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.White)" ).forEach(a=>a.style.display = "none");
     }
     if(brownCheck.checked){
-        document.querySelectorAll("tr:not(.Brown)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Brown)" ).forEach(a=>a.style.display = "none");
     }
     if(blackCheck.checked){
-        document.querySelectorAll("tr:not(.Black)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Black)" ).forEach(a=>a.style.display = "none");
     }
     if(greyCheck.checked){
-        document.querySelectorAll("tr:not(.Grey)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Grey)" ).forEach(a=>a.style.display = "none");
     }
     if(blueCheck.checked){
-        document.querySelectorAll("tr:not(.Blue)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Blue)" ).forEach(a=>a.style.display = "none");
     }
     if(greenCheck.checked){
-        document.querySelectorAll("tr:not(.Green)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Green)" ).forEach(a=>a.style.display = "none");
     }
     if(purpleCheck.checked){
-        document.querySelectorAll("tr:not(.Purple)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Purple)" ).forEach(a=>a.style.display = "none");
     }
     if(redCheck.checked){
-        document.querySelectorAll("tr:not(.Red)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Red)" ).forEach(a=>a.style.display = "none");
     }
     if(copperCheck.checked){
-        document.querySelectorAll("tr:not(.Copper)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Copper)" ).forEach(a=>a.style.display = "none");
     }
     if(orangeCheckhw.checked){
-        document.querySelectorAll("tr:not(.Orange-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Orange-h)" ).forEach(a=>a.style.display = "none");
     }
     if(whiteCheckhw.checked){
-        document.querySelectorAll("tr:not(.White-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.White-h)" ).forEach(a=>a.style.display = "none");
     }
     if(brownCheckhw.checked){
-        document.querySelectorAll("tr:not(.Brown-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Brown-h)" ).forEach(a=>a.style.display = "none");
     }
     if(blackCheckhw.checked){
-        document.querySelectorAll("tr:not(.Black-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Black-h)" ).forEach(a=>a.style.display = "none");
     }
     if(greyCheckhw.checked){
-        document.querySelectorAll("tr:not(.Grey-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Grey-h)" ).forEach(a=>a.style.display = "none");
     }
     if(blueCheckhw.checked){
-        document.querySelectorAll("tr:not(.Blue-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Blue-h)" ).forEach(a=>a.style.display = "none");
     }
     if(greenCheckhw.checked){
-        document.querySelectorAll("tr:not(.Green-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Green-h)" ).forEach(a=>a.style.display = "none");
     }
     if(purpleCheckhw.checked){
-        document.querySelectorAll("tr:not(.Purple-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Purple-h)" ).forEach(a=>a.style.display = "none");
     }
     if(redCheckhw.checked){
-        document.querySelectorAll("tr:not(.Red-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Red-h)" ).forEach(a=>a.style.display = "none");
     }
     if(copperCheckhw.checked){
-        document.querySelectorAll("tr:not(.Copper-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Copper-h)" ).forEach(a=>a.style.display = "none");
     }
 
     if(tailsChoice.value === "Yes"){
-        document.querySelectorAll("tr:not(.Yes-t)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Yes-t)" ).forEach(a=>a.style.display = "none");
     }
     if(tailsChoice.value === "No"){
-        document.querySelectorAll("tr:not(.No-t)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.No-t)" ).forEach(a=>a.style.display = "none");
     }
 
     if(hookedChoice.value === "Yes"){
-        document.querySelectorAll("tr:not(.Yes-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Yes-h)" ).forEach(a=>a.style.display = "none");
     }
     if(hookedChoice.value === "No"){
-        document.querySelectorAll("tr:not(.No-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.No-h)" ).forEach(a=>a.style.display = "none");
     }
 
     if(sizeChoice.value === "Small"){
-        document.querySelectorAll("tr:not(.Small)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Small)" ).forEach(a=>a.style.display = "none");
     }
     if(sizeChoice.value === "Medium"){
-        document.querySelectorAll("tr:not(.Medium)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Medium)" ).forEach(a=>a.style.display = "none");
     }
     if(sizeChoice.value === "Large"){
-        document.querySelectorAll("tr:not(.Large)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Large)" ).forEach(a=>a.style.display = "none");
     }
 
     if(shapeChoice.value === "Common"){
-        document.querySelectorAll("tr:not(.Common)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Common)" ).forEach(a=>a.style.display = "none");
     }
     if(shapeChoice.value === "Skipper"){
-        document.querySelectorAll("tr:not(.Skipper)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Skipper)" ).forEach(a=>a.style.display = "none");
     }
     if(shapeChoice.value === "Hairstreak"){
-        document.querySelectorAll("tr:not(.Hairstreak)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Hairstreak)" ).forEach(a=>a.style.display = "none");
     }
     if(shapeChoice.value === "Unique"){
-        document.querySelectorAll("tr:not(.Unique)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Unique)" ).forEach(a=>a.style.display = "none");
     }
     if(shapeChoice.value === "Longtail"){
-        document.querySelectorAll("tr:not(.Longtail)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly:not(.Longtail)" ).forEach(a=>a.style.display = "none");
     }
 }
 
