@@ -39,6 +39,8 @@ function refreshFilter(){
 }
 
 function applyFilter() {
+    document.querySelectorAll(".butterfly").forEach(a=>a.style.display = "block");
+
     if(familyChoice.value === "Hesperiidae"){
         document.querySelectorAll("tr:not(.Hesperiidae)" ).forEach(a=>a.style.display = "none");
     }
