@@ -7,12 +7,11 @@
 <%- include("./partials/nav.ejs") %>
 <div class="container-fluid">
     <br>
+    <h2>Butterfly Attributes:</h2>
     <div class="row">
-        <h2>Butterfly Attributes:</h2>
-        <div class="col-9">
-            <div id="familySelectors">
+
+            <div id="familySelectors" class="col-3">
                 <label for="familySelect"><b>Family:</b></label>
-                <!--<input type="checkbox" id="familySkippers">-->
                 <select id="familySelect" class="form-select">
                     <option value="none">Unknown</option>
                     <option value="Hesperiidae">Hesperiidae (Skipper)</option>
@@ -22,54 +21,7 @@
                     <option value="Lycaenidae">Lycaenidae</option>
                 </select>
                 <br>
-            </div>
-            <div id="primaryColorSelectors">
-                <b>Forewing Color:</b>
-                <label for="colorCheckOrange">Orange</label>
-                <input type="checkbox" id="colorCheckOrange">
-                <label for="colorCheckWhite">White</label>
-                <input type="checkbox" id="colorCheckWhite">
-                <label for="colorCheckBrown">Brown</label>
-                <input type="checkbox" id="colorCheckBrown">
-                <label for="colorCheckBlack">Black</label>
-                <input type="checkbox" id="colorCheckBlack">
-                <label for="colorCheckBlue">Blue</label>
-                <input type="checkbox" id="colorCheckBlue">
-                <label for="colorCheckGrey">Grey</label>
-                <input type="checkbox" id="colorCheckGrey">
-                <label for="colorCheckGreen">Green</label>
-                <input type="checkbox" id="colorCheckGreen">
-                <label for="colorCheckPurple">Purple</label>
-                <input type="checkbox" id="colorCheckPurple">
-                <label for="colorCheckRed">Red</label>
-                <input type="checkbox" id="colorCheckRed">
-                <label for="colorCheckCopper">Copper</label>
-                <input type="checkbox" id="colorCheckCopper">
-            </div>
-            <div>
-                <b>Hindwing Color:</b>
-                <label for="colorCheckOrangehw">Orange</label>
-                <input type="checkbox" id="colorCheckOrangehw">
-                <label for="colorCheckWhitehw">White</label>
-                <input type="checkbox" id="colorCheckWhitehw">
-                <label for="colorCheckBrownhw">Brown</label>
-                <input type="checkbox" id="colorCheckBrownhw">
-                <label for="colorCheckBlackhw">Black</label>
-                <input type="checkbox" id="colorCheckBlackhw">
-                <label for="colorCheckBluehw">Blue</label>
-                <input type="checkbox" id="colorCheckBluehw">
-                <label for="colorCheckGreyhw">Grey</label>
-                <input type="checkbox" id="colorCheckGreyhw">
-                <label for="colorCheckGreenhw">Green</label>
-                <input type="checkbox" id="colorCheckGreenhw">
-                <label for="colorCheckPurplehw">Purple</label>
-                <input type="checkbox" id="colorCheckPurplehw">
-                <label for="colorCheckRedhw">Red</label>
-                <input type="checkbox" id="colorCheckRedhw">
-                <label for="colorCheckCopperhw">Copper</label>
-                <input type="checkbox" id="colorCheckCopperhw">
-            </div>
-            <div>
+                <br>
                 <b>Tails:</b>
                 <select id="tailSelect">
                     <option>Unknown</option>
@@ -77,17 +29,18 @@
                     <option value="No">No</option>
                 </select>
                 <button type="button" class="btn btn-sm btn-primary bi-info" data-toggle="popover" title="What are Tails?" data-content="Description of tails and images of what they look like"></button>
-            </div>
-            <div>
+                <br>
+                <br>
                 <b>Antennae Shape:</b>
+                <br>
                 <select id="hookSelect">
                     <option>Unknown</option>
                     <option value="Yes">Hooked</option>
                     <option value="No">Normal</option>
                 </select>
                 <button type="button" class="btn btn-sm btn-primary bi-info" data-toggle="popover" title="What are Hooked Antennae?" data-content="Description of hooked antennae and images of what they look like"></button>
-            </div>
-            <div>
+                <br>
+                <br>
                 <b>Shape:</b>
                 <select id="shapeSelect">
                     <option>Unknown</option>
@@ -98,8 +51,8 @@
                     <option value="Longtail">Longtail</option>
                 </select>
                 <button type="button" class="btn btn-sm btn-primary bi-info" data-toggle="popover" title="Shapes?" data-content="Description of different shapes and examples of each"></button>
-            </div>
-            <div>
+                <br>
+                <br>
                 <b>Size:</b>
                 <select id="sizeSelect">
                     <option>Unknown</option>
@@ -108,22 +61,79 @@
                     <option value="Large">Greater than 2.5"</option>
                 </select>
             </div>
-            <div>
-                <b>Pattern</b>
-                <label for="patternCheckVeins">Veins</label>
-                <input type="checkbox" id="patternCheckVeins">
-                <label for="patternCheckEyes">Eyes</label>
-                <input type="checkbox" id="patternCheckEyes">
-                <label for="patternCheckSpots">Spots</label>
-                <input type="checkbox" id="patternCheckSpots">
-                <label for="patternCheckEtc">Etc</label>
-                <input type="checkbox" id="patternCheckEtc">
+            <div class="col-2">
+                <b>Forewing Color:</b>
+                <br>
+                <label for="colorCheckOrange">Orange</label>
+                <input type="checkbox" id="colorCheckOrange" class="orange">
+                <br><label for="colorCheckWhite">White</label>
+                <input type="checkbox" id="colorCheckWhite" class="white">
+                <br><label for="colorCheckBrown">Brown</label>
+                <input type="checkbox" id="colorCheckBrown" class="brown">
+                <br><label for="colorCheckBlack">Black</label>
+                <input type="checkbox" id="colorCheckBlack" class="black">
+                <br><label for="colorCheckBlue">Blue</label>
+                <input type="checkbox" id="colorCheckBlue" class="blue">
+                <br><label for="colorCheckGrey">Grey</label>
+                <input type="checkbox" id="colorCheckGrey" class="grey">
+                <br><label for="colorCheckGreen">Green</label>
+                <input type="checkbox" id="colorCheckGreen" class="green">
+                <br><label for="colorCheckPurple">Purple</label>
+                <input type="checkbox" id="colorCheckPurple" class="purple">
+                <br><label for="colorCheckRed">Red</label>
+                <input type="checkbox" id="colorCheckRed" class="red">
+                <br><label for="colorCheckCopper">Copper</label>
+                <input type="checkbox" id="colorCheckCopper" class="copper">
             </div>
-            <div>
+            <div class="col-2">
+                <b>Hindwing Color:</b>
+                <br><label for="colorCheckOrangehw">Orange</label>
+                <input type="checkbox" id="colorCheckOrangehw" class="orange">
+                <br><label for="colorCheckWhitehw">White</label>
+                <input type="checkbox" id="colorCheckWhitehw" class="white">
+                <br><label for="colorCheckBrownhw">Brown</label>
+                <input type="checkbox" id="colorCheckBrownhw" class="brown">
+                <br><label for="colorCheckBlackhw">Black</label>
+                <input type="checkbox" id="colorCheckBlackhw" class="black">
+                <br><label for="colorCheckBluehw">Blue</label>
+                <input type="checkbox" id="colorCheckBluehw" class="blue">
+                <br><label for="colorCheckGreyhw">Grey</label>
+                <input type="checkbox" id="colorCheckGreyhw" class="grey">
+                <br><label for="colorCheckGreenhw">Green</label>
+                <input type="checkbox" id="colorCheckGreenhw" class="green">
+                <br><label for="colorCheckPurplehw">Purple</label>
+                <input type="checkbox" id="colorCheckPurplehw" class="purple">
+                <br><label for="colorCheckRedhw">Red</label>
+                <input type="checkbox" id="colorCheckRedhw" class="red">
+                <br><label for="colorCheckCopperhw">Copper</label>
+                <input type="checkbox" id="colorCheckCopperhw" class="copper">
+
+            </div>
+
+            <div class="col-2">
+                <b>Pattern</b>
+                <br><label for="patternCheckVeins">Veins</label>
+                <input type="checkbox" id="patternCheckVeins">
+                <br><label for="patternCheckEyes">Eyespots</label>
+                <input type="checkbox" id="patternCheckEyes">
+                <br><label for="patternCheckSpots">Spots</label>
+                <input type="checkbox" id="patternCheckSpots">
+                <br><label for="patternCheckCheckered">Checkered</label>
+                <input type="checkbox" id="patternCheckCheckered">
+                <br><label for="patternCheckMottled">Mottled</label>
+                <input type="checkbox" id="patternCheckMottled">
+                <br><label for="patternCheckIridescent">Iridescent</label>
+                <input type="checkbox" id="patternCheckIridescent">
+                <br><label for="patternCheckStripes">Stripes</label>
+                <input type="checkbox" id="patternCheckStripes">
+                <br><label for="patternCheckNone">None</label>
+                <input type="checkbox" id="patternCheckNone">
+                <br>
+                <br>
                 <button class="btn-primary" onclick="applyFilter()" id="filterSubmit">Apply Filter</button>
                 <button class="btn-warning" onclick="refreshFilter()" id="filterRefresh">Clear All Filters</button>
             </div>
-        </div>
+
     </div>
 
     <div class="row">
@@ -155,7 +165,16 @@
                 <%hwcolors2 += '-h'%>
                 <%}%>
                 <%}%>
-                <button id="<%=buttEntry._id%>" type="button" class="m-5 btn btn-lg butterfly <%=buttEntry.shape%> <%=buttEntry.size%> <%=colors2%> <%=hwcolors2%> <%=buttEntry.hooked%>-h <%=buttEntry.tails%>-t <%=buttEntry.family%>" data-toggle="popover" title="<%=buttEntry.name%>" data-content="Family: <%= buttEntry.family%> Forewing Colors: <%=colors%> Hindwing Colors <%=hwcolors%> Size: <%=buttEntry.size%> Shape: <%=buttEntry.shape%> Pattern: <%=buttEntry.pattern%> Tails: <%=buttEntry.tails%> Hooked: <%=buttEntry.hooked%>"><b><%=buttEntry.name%></b><br><img src="butterflyImg/<%=buttEntry.imgLoc%>" width="260" height="140"></button>
+                <%let patternArray = buttEntry.pattern.split(", ")%>
+                <%let pattern2 = ''%>
+                <%for(let i = 0; i < patternArray.length; i++){%>
+                <%if (pattern2 != ''){%>
+                <%pattern2 = pattern2 + " " + patternArray[i]%>
+                <%} else {%>
+                <%pattern2 += patternArray[i]%>
+                <%}%>
+                <%}%>
+                <button id="<%=buttEntry._id%>" type="button" class="<%=pattern2%> m-5 btn btn-lg butterfly <%=buttEntry.shape%> <%=buttEntry.size%> <%=colors2%> <%=hwcolors2%> <%=buttEntry.hooked%>-h <%=buttEntry.tails%>-t <%=buttEntry.family%>" data-toggle="popover" title="<%=buttEntry.name%>" data-content="Family: <%= buttEntry.family%> Forewing Colors: <%=colors%> Hindwing Colors <%=hwcolors%> Size: <%=buttEntry.size%> Shape: <%=buttEntry.shape%> Pattern: <%=buttEntry.pattern%> Tails: <%=buttEntry.tails%> Hooked: <%=buttEntry.hooked%>"><b><%=buttEntry.name%></b><br><img src="butterflyImg/<%=buttEntry.imgLoc%>" width="260" height="140"></button>
             <% }) %>
         </div>
     </div>

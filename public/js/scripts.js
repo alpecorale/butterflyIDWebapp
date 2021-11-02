@@ -32,6 +32,14 @@ const tailsChoice = document.getElementById('tailSelect');
 const hookedChoice = document.getElementById('hookSelect');
 const sizeChoice = document.getElementById('sizeSelect');
 const shapeChoice = document.getElementById('shapeSelect');
+const veinsCheck = document.getElementById('patternCheckVeins'),
+    spotsCheck = document.getElementById('patternCheckSpots'),
+    stripeCheck = document.getElementById('patternCheckStripes'),
+    checkeredCheck = document.getElementById('patternCheckCheckered'),
+    iridescentCheck = document.getElementById('patternCheckIridescent'),
+    mottledCheck = document.getElementById('patternCheckMottled'),
+    eyespotsCheck = document.getElementById('patternCheckEyes'),
+    noPatternCheck = document.getElementById('patternCheckNone');
 
 
 function refreshFilter(){
@@ -157,8 +165,46 @@ function applyFilter() {
     if(shapeChoice.value === "Longtail"){
         document.querySelectorAll(".butterfly:not(.Longtail)" ).forEach(a=>a.style.display = "none");
     }
+    if(veinsCheck.checked){
+        document.querySelectorAll(".butterfly:not(.Veins)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly.veins" ).forEach(a=>a.style.display = "block");
+    }
+    if(spotsCheck.checked){
+        document.querySelectorAll(".butterfly:not(.Spots)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly.Spotted" ).forEach(a=>a.style.display = "block");
+        document.querySelectorAll(".butterfly.Spot" ).forEach(a=>a.style.display = "block");
+        document.querySelectorAll(".butterfly.spots" ).forEach(a=>a.style.display = "block");
+        document.querySelectorAll(".butterfly.Dots" ).forEach(a=>a.style.display = "block");
+    }
+    if(checkeredCheck.checked){
+        document.querySelectorAll(".butterfly:not(.Checkered)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly.checkered" ).forEach(a=>a.style.display = "block");
+    }
+    if(stripeCheck.checked){
+        document.querySelectorAll(".butterfly:not(.Stripe)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly.Stripes" ).forEach(a=>a.style.display = "block");
+        document.querySelectorAll(".butterfly.Striped" ).forEach(a=>a.style.display = "block");
+        document.querySelectorAll(".butterfly.Band" ).forEach(a=>a.style.display = "block");
+        document.querySelectorAll(".butterfly.Banded" ).forEach(a=>a.style.display = "block");
+        document.querySelectorAll(".butterfly.Bands" ).forEach(a=>a.style.display = "block");
+    }
+    if(iridescentCheck.checked){
+        document.querySelectorAll(".butterfly:not(.Iridescent)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly.iridescent" ).forEach(a=>a.style.display = "block");
+    }
+    if(mottledCheck.checked){
+        document.querySelectorAll(".butterfly:not(.Mottled)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly.mottled" ).forEach(a=>a.style.display = "block");
+    }
+    if(eyespotsCheck.checked){
+        document.querySelectorAll(".butterfly:not(.Eyespots)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly.Eyes" ).forEach(a=>a.style.display = "block");
+        document.querySelectorAll(".butterfly.eyespots" ).forEach(a=>a.style.display = "block");
+    }
+    if(noPatternCheck.checked){
+        document.querySelectorAll(".butterfly:not(.None)" ).forEach(a=>a.style.display = "none");
+    }
 }
-
 
 
 async function submitHandler() {

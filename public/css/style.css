@@ -2,3 +2,10 @@ body {
     background-color: lightblue;
 }
 
+input.brown {
+    border: solid #5f260b 2px;
+}
+
+input.red {
+    background-color: red;
+}
