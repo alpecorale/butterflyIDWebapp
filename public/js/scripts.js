@@ -94,6 +94,7 @@ function applyFilter() {
     }
     if(copperCheck.checked){
         document.querySelectorAll(".butterfly:not(.Copper)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly.Bronze" ).forEach(a=>a.style.display = "block");
     }
     if(orangeCheckhw.checked){
         document.querySelectorAll(".butterfly:not(.Orange-h)" ).forEach(a=>a.style.display = "none");
@@ -124,6 +125,7 @@ function applyFilter() {
     }
     if(copperCheckhw.checked){
         document.querySelectorAll(".butterfly:not(.Copper-h)" ).forEach(a=>a.style.display = "none");
+        document.querySelectorAll(".butterfly.Bronze-h" ).forEach(a=>a.style.display = "block");
     }
 
     if(tailsChoice.value === "Yes"){
