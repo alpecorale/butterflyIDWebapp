@@ -206,6 +206,27 @@ function applyFilter() {
     }
 }
 
+function openShape(){
+    if (document.getElementById('shapeImgs').style.display == "none" ){
+        document.getElementById('shapeImgs').style.display = 'block';
+    } else {
+        document.getElementById('shapeImgs').style.display = 'none';
+    }
+}
+function openTails(){
+    if (document.getElementById('tailsImgs').style.display == "none" ){
+        document.getElementById('tailsImgs').style.display = 'block';
+    } else {
+        document.getElementById('tailsImgs').style.display = 'none';
+    }
+}
+function openAntennas(){
+    if (document.getElementById('antennasImgs').style.display == "none" ){
+        document.getElementById('antennasImgs').style.display = 'block';
+    } else {
+        document.getElementById('antennasImgs').style.display = 'none';
+    }
+}
 
 async function submitHandler() {
     let colorList = colorVal.value.split(", ");

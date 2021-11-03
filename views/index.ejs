@@ -28,7 +28,14 @@
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
-                <button type="button" class="btn btn-sm btn-primary bi-info" data-toggle="popover" title="What are Tails?" data-content="Description of tails and images of what they look like"></button>
+                <button type="button" class="btn btn-sm btn-primary bi-info" onclick="openTails()"></button>
+                <!--<button type="button" class="btn btn-sm btn-primary bi-info" data-toggle="popover" title="What are Tails?" data-content="Description of tails and images of what they look like"></button>
+                -->
+                <div id="tailsImgs" class="hidden">
+                    <p>Example of Tails:</p>
+                    <img src="butterflyImg/tails1.png" width="260" height="140">
+                    <img src="butterflyImg/tails2.jpg" width="260" height="140">
+                </div>
                 <br>
                 <br>
                 <b>Antennae Shape:</b>
@@ -38,7 +45,15 @@
                     <option value="Yes">Hooked</option>
                     <option value="No">Normal</option>
                 </select>
-                <button type="button" class="btn btn-sm btn-primary bi-info" data-toggle="popover" title="What are Hooked Antennae?" data-content="Description of hooked antennae and images of what they look like"></button>
+                <button type="button" class="btn btn-sm btn-primary bi-info" onclick="openAntennas()"></button>
+                <!--<button type="button" class="btn btn-sm btn-primary bi-info" data-toggle="popover" title="What are Hooked Antennae?" data-content="Description of hooked antennae and images of what they look like"></button>
+                -->
+                <div id="antennasImgs" class="hidden">
+                    <p>Hooks:</p>
+                    <img src="butterflyImg/hooks.png" width="260" height="140">
+                    <p>No Hooks:</p>
+                    <img src="butterflyImg/noHooks.png" width="260" height="140">
+                </div>
                 <br>
                 <br>
                 <b>Shape:</b>
@@ -50,7 +65,17 @@
                     <option value="Skipper">Skipper</option>
                     <option value="Longtail">Longtail</option>
                 </select>
-                <button type="button" class="btn btn-sm btn-primary bi-info" data-toggle="popover" title="Shapes?" data-content="Description of different shapes and examples of each"></button>
+                <!--<button type="button"  class="btn btn-sm btn-primary bi-info" data-toggle="popover" title="Shapes?" data-content="Description of different shapes and examples of each"></button>
+                -->
+                <button type="button" class="btn btn-sm btn-primary bi-info" onclick="openShape()"></button>
+                <div id='shapeImgs' class="hidden">
+                    <p>Example of Shapes:</p>
+                    <img src="butterflyImg/butterfly-shape-common.png" width="260" height="140">
+                    <img src="butterflyImg/butterfly-shape-unique.png" width="260" height="140">
+                    <img src="butterflyImg/butterfly-shape-skippers.png" width="260" height="140">
+                    <img src="butterflyImg/butterfly-shape-hairstreaks.png" width="260" height="140">
+                    <img src="butterflyImg/butterfly-shapes-swallowtails.png" width="260" height="140">
+                </div>
                 <br>
                 <br>
                 <b>Size:</b>

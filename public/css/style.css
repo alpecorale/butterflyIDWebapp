@@ -9,3 +9,7 @@ input.brown {
 input.red {
     background-color: red;
 }
+
+.hidden {
+    display: none;
+}
