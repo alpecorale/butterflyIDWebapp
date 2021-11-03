@@ -16,6 +16,7 @@ const orangeCheck = document.getElementById("colorCheckOrange"),
     purpleCheck = document.getElementById("colorCheckPurple"),
     copperCheck = document.getElementById("colorCheckCopper"),
     redCheck = document.getElementById("colorCheckRed"),
+    yellowCheck = document.getElementById("colorCheckYellow"),
     brownCheck = document.getElementById("colorCheckBrown");
 const orangeCheckhw = document.getElementById("colorCheckOrangehw"),
     whiteCheckhw = document.getElementById("colorCheckWhitehw"),
@@ -26,6 +27,7 @@ const orangeCheckhw = document.getElementById("colorCheckOrangehw"),
     purpleCheckhw = document.getElementById("colorCheckPurplehw"),
     copperCheckhw = document.getElementById("colorCheckCopperhw"),
     redCheckhw = document.getElementById("colorCheckRedhw"),
+    yellowCheckhw = document.getElementById('colorCheckYellowhw'),
     brownCheckhw = document.getElementById("colorCheckBrownhw");
 const familyChoice = document.getElementById('familySelect');
 const tailsChoice = document.getElementById('tailSelect');
@@ -92,6 +94,9 @@ function applyFilter() {
     if(redCheck.checked){
         document.querySelectorAll(".butterfly:not(.Red)" ).forEach(a=>a.style.display = "none");
     }
+    if(yellowCheck.checked){
+        document.querySelectorAll(".butterfly:not(.Yellow)" ).forEach(a=>a.style.display = "none");
+    }
     if(copperCheck.checked){
         document.querySelectorAll(".butterfly:not(.Copper)" ).forEach(a=>a.style.display = "none");
         document.querySelectorAll(".butterfly.Bronze" ).forEach(a=>a.style.display = "block");
@@ -122,6 +127,9 @@ function applyFilter() {
     }
     if(redCheckhw.checked){
         document.querySelectorAll(".butterfly:not(.Red-h)" ).forEach(a=>a.style.display = "none");
+    }
+    if(yellowCheckhw.checked){
+        document.querySelectorAll(".butterfly:not(.Yellow-h)" ).forEach(a=>a.style.display = "none");
     }
     if(copperCheckhw.checked){
         document.querySelectorAll(".butterfly:not(.Copper-h)" ).forEach(a=>a.style.display = "none");
